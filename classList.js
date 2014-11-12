@@ -189,13 +189,13 @@ if (objCtr.defineProperty) {
 (function () {
 	"use strict";
 
-	var testElement = document.createElement("_");
+	var testElement = document.documentElement;
 
-	testElement.classList.add("c1", "c2");
+	testElement.classList.add("omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-1", "omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-2");
 
 	// Polyfill for IE 10/11 and Firefox <26, where classList.add and
 	// classList.remove exist but support only one argument at a time.
-	if (!testElement.classList.contains("c2")) {
+	if (!testElement.classList.contains("omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-2")) {
 		var createMethod = function(method) {
 			var original = DOMTokenList.prototype[method];
 
@@ -212,11 +212,11 @@ if (objCtr.defineProperty) {
 		createMethod('remove');
 	}
 
-	testElement.classList.toggle("c3", false);
+	testElement.classList.toggle("omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-3", false);
 
 	// Polyfill for IE 10 and Firefox <24, where classList.toggle does not
 	// support the second argument.
-	if (testElement.classList.contains("c3")) {
+	if (testElement.classList.contains("omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-3")) {
 		var _toggle = DOMTokenList.prototype.toggle;
 
 		DOMTokenList.prototype.toggle = function(token, force) {
@@ -228,11 +228,10 @@ if (objCtr.defineProperty) {
 		};
 
 	}
-
+	testElement.classList.add("omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-1", "omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-2",  "omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-3");
 	testElement = null;
 }());
 
 }
 
 }
-
