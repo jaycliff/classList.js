@@ -11,10 +11,10 @@
 
 /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
 
-if ("document" in self) {
+if ("document" in self || window.hasOwnProperty('document')) {
 
 // Full polyfill for browsers with no classList support
-if (!("classList" in document.createElement("_"))) {
+if (!document.documentElement.classList) {
 
 (function (view) {
 
