@@ -11,7 +11,7 @@
 
 /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
 
-if ("document" in self || window.hasOwnProperty('document')) {
+if ("document" in self || window.document) {
 
 // Full polyfill for browsers with no classList support
 if (!document.documentElement.classList) {
