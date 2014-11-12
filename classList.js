@@ -228,7 +228,7 @@ if (objCtr.defineProperty) {
 		};
 
 	}
-	testElement.classList.add("omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-1", "omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-2",  "omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-3");
+	testElement.classList.remove("omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-1", "omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-2",  "omg-this-crickey-classlist-shim-is-horribly-coded-damnnnnnnnnnn-3");
 	testElement = null;
 }());
 
